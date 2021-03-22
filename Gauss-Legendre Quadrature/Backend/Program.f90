@@ -5,7 +5,7 @@ module FunctionModule
     function f(x)
         implicit none
         real f, x
-        f = 2000.0 * log( 140000.0 / ( 140000.0 - 2100.0 * x)) - 9.8 * x
+        f = -0.18 * x**2 + 4.11 * x -9.79
     end function f
 end module FunctionModule
 

@@ -85,17 +85,15 @@ program Program
             end do
         end do
         4 format (f10.2)
-        write (2, *) ""
-        write (2, '(a)', advance = 'no') " Z =   ["
         do i = 1, n
             write (2, '(f9.3)', advance = 'no') Z(i)
+            write (*, '(f9.3)', advance = 'no') Z(i)
         end do
-        write (2, *) "]"
         write (2, *) ""
-        write (2, '(a)', advance = 'no') " X =   ["
+        write (*, *) ""
         do i = 1, n
             write (2, '(f9.3)', advance = 'no') X(i)
+            write (*, '(f9.3)', advance = 'no') X(i)
         end do
-        write (2, *) "]"
 close(unit = 2)
 end program Program

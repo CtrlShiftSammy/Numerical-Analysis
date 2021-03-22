@@ -51,17 +51,31 @@ program Program
                 end do
             end do
         end do
+        
+        write (3, '(a15)', advance = 'no') "Iteration" !Printing in same line
+        do i = 1, (2 * n)
+            if ( i == (2 * n) ) then
+                write (3, 5, advance = 'yes') "Error % ", (i / 2) !Printing in next line
+            else
+                if ( mod(i, 2) == 1) then
+                    write (3, 5, advance = 'no') "Variable ", ((i + 1) / 2) !Printing in same line
+                else
+                    write (3, 5, advance = 'no') "Error % ", (i / 2) !Printing in same line
+                end if
+            end if
+    end do
 
         do i = 1, 10
+            write (3, '(i15)', advance = 'no') i !Printing in same line
             do j = 1, (2 * n)
                 if ( j == (2 * n) ) then
                     write (3, 4, advance = 'yes') Table(i, j) !Printing in next line
                 else
                     write (3, 4, advance = 'no') Table(i, j) !Printing in same line
                 end if
-                4 format (f15.2)
             end do
         end do
         close(unit = 3)
-
+        4 format (f15.2)
+        5 format (a13, i2)
 end program Program

@@ -14,6 +14,7 @@ program Program
     implicit none
     real x1, x2, x3, x4, x5, x6, c1, c2, c3, c4, c5, c6
     real a, b, m, c, n, I
+    
     999 write (*, *) "Enter number of points for Gauss–Legendre Quadrature."
     read (*, *) n
     write (*, *) "Enter lower limit."
