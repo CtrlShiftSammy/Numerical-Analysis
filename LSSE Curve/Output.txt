@@ -1,2 +1,1 @@
- y =    2.00000000      x +    3.00000000    
- Correlation Coefficient =              NaN
+  x (y ^ (  0.331885278     )) =   0.163552299    
